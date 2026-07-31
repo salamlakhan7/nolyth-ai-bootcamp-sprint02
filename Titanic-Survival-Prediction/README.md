@@ -8,7 +8,7 @@ Sprint 02 official project - Nolyth AI Bootcamp (Associate AI Engineer Training 
 
 ## Project Objective
 
-Predict whether a passenger survived the Titanic disaster, based on passenger data (class, age, sex, fare, family size, etc.), using classification models built in Sprint 02 — then serve those models through a real, deployed full-stack application with user authentication and prediction history.
+Predict whether a passenger survived the Titanic disaster, based on passenger data (class, age, sex, fare, family size, etc.), using classification models built in Sprint 02 - then serve those models through a real, deployed full-stack application with user authentication and prediction history.
 
 ## Why Titanic
 
@@ -21,7 +21,7 @@ Predict whether a passenger survived the Titanic disaster, based on passenger da
 
 Source: [Kaggle - Titanic: Machine Learning from Disaster](https://www.kaggle.com/competitions/titanic)
 
-- `train.csv` — 891 rows, includes the `Survived` target column
+- `train.csv` - 891 rows, includes the `Survived` target column
 - Columns: `PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fare, Cabin, Embarked`
 
 ## Models
@@ -90,20 +90,63 @@ Both backend and frontend were fully tested locally (two terminals, backend on `
 
 ## Screenshots
 
-| # | Screenshot | What it verifies |
-|---|---|---|
-| 01 | `01_api_root_running.png` | Backend root endpoint responding locally |
-| 02 | `02_swagger_docs_page.JPG` | FastAPI interactive docs loaded, all endpoints visible |
-| 03 | `03_register_success.JPG` | `/register` — user creation working against Neon |
-| 04 | `04_login_success.JPG` | `/login` — JWT token issued successfully |
-| 05 | `05_predict_response.JPG` | `/predict` — real model output returned |
-| 06 | `06_history_response.JPG` | `/history` — prediction correctly logged and retrieved |
-| 07 | `07_get_root_run_successful_with_response.JPG` | Root endpoint re-verified after fixes |
-| 08 | `08_frontend_predict_form.JPG` | Streamlit UI — passenger input form, logged in |
-| 09 | `09_frontend_prediction_result.JPG` | Streamlit UI — prediction results displayed |
-| 10 | `10_frontend_history_tab.JPG` | Streamlit UI — history tab showing past predictions |
-| 11 | `11_Successful_render_deployed_showdocs.JPG` | Backend live on Render, `/docs` reachable publicly |
-| 12 | `12_frontend_live_deployed.JPG` | Full app live and working on Streamlit Community Cloud |
+### Local Development & Testing
+
+Backend endpoints verified individually via Swagger UI, then the same flow re-verified through the Streamlit frontend, all against the live Neon database.
+
+**Backend — API & endpoint verification**
+
+![API root running](./screenshots/01_api_root_running.png)
+
+*Backend root endpoint responding locally.*
+
+![Swagger docs page](./screenshots/02_swagger_docs_page.JPG)
+
+*FastAPI interactive docs loaded, all endpoints visible.*
+
+![Register success](./screenshots/03_register_success.JPG)
+
+*`/register` — user creation working against Neon.*
+
+![Login success](./screenshots/04_login_success.JPG)
+
+*`/login` — JWT token issued successfully.*
+
+![Predict response](./screenshots/05_predict_response.JPG)
+
+*`/predict` — real model output returned.*
+
+![History response](./screenshots/06_history_response.JPG)
+
+*`/history` — prediction correctly logged and retrieved.*
+
+![Root re-verified](./screenshots/07_get_root_run_successful_with_response.JPG)
+
+*Root endpoint re-verified after fixes.*
+
+**Frontend — Streamlit UI**
+
+![Frontend predict form](./screenshots/08_frontend_predict_form.JPG)
+
+*Passenger input form, logged in.*
+
+![Frontend prediction result](./screenshots/09_frontend_prediction_result.JPG)
+
+*Prediction results displayed for both models.*
+
+![Frontend history tab](./screenshots/10_frontend_history_tab.JPG)
+
+*History tab showing past predictions.*
+
+### Production Deployment
+
+![Render deployed](./screenshots/11_Successful_render_deployed_showdocs.JPG)
+
+*Backend live on Render, `/docs` reachable publicly.*
+
+![Frontend live deployed](./screenshots/12_frontend_live_deployed.JPG)
+
+*Full app live and working on Streamlit Community Cloud.*
 
 ## Repo Structure
 
